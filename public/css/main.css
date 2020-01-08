@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    color: #fff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.projectPart {
+    margin: auto;
+    background: #101010;
+    padding: 80px 0px;
+    position: relative;
+    text-align: center;
+}
+
+.projectCard {
+    font-family: 'Montserrat', sans-serif;
+    width: 25%;
+    min-width: 270px;
+    margin: 40px;
+    display: inline-block;
+    text-align: left;
+    background-color: #2f2f2fbf;
+}
+
+.projectCard img {
+    width: 100%;
+}
+
+.projectCardTextArea {
+    padding: 20px;
+    position: relative;
+    top: -10px;
+}
+
+.projectCard h2 {
+    margin: 5px 0px 0px 0px;
+}
+
+.projectCard h6 {
+    margin: 5px 0px 0px 0px;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.projectCard p {
+    font-size: 14px;
+    font-weight: 300;
+    margin: 10px 0px;
+}
+
+.projectCard button {
+    width: 100%;
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    color: #000;
+    font-weight: 700;
+    background-color: #05e69e;
+    font-family: 'Montserrat', sans-serif;
+    border: 2px solid #fff0;
+}
+
+.projectCard button:hover {
+    box-shadow: 0px 0px 10px 0px #000000;
+    border: 2px solid #fff;
+}
+
+.navbar {
+    width: 100%;
+    height: 80px;
+}
+
+.navbar svg {
+    width: 130px;
+    margin: 14px 30px;
+    fill: #fff;
+    z-index: 50;
+    position: relative;
+}
+
+.navA {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.navbar a:hover {
+    background-color: #ffffff;
+    color: #1f1e1e;
+    transition: .3s all ease-in-out;
+    -webkit-transition: .3s all ease-in-out;
+    -moz-transition: .3s all ease-in-out;
+}
+
+.navOptions {
+    display: inline-block;
+    position: absolute;
+    margin: 27px 40px;
+    right: 0;
+    z-index: 50;
+}
+
+.navOptions li {
+    margin: 0px 5px 0px 0px;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+}
+
+.header {
+    height: 100%;
+    position: relative;
+    background-color: #15141400;
+    padding: 100px 60px;
+    max-width: 1800px;
+    margin: auto;
+}
+
+.headerTitle {
+    z-index: 50;
+    position: relative;
+    font-size: 62px;
+    width: 70%;
+    margin-left: 30px;
+    line-height: 120px;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header i {
+    font-size: 28px;
+    margin-right: 15px;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 30px;
+}
+
+.lightIconHover:hover {
+    background-color: #000 !important;
+    color: #fff !important;
+    transition: 0.4s ease-in-out;
+}
+
+.header i:hover {
+    background-color: #fff;
+    color: #000;
+    transition: 0.4s ease-in-out;
+}
+
+.header hr {
+    height: 3px;
+    background-color: #05e69e;
+    border: none;
+    z-index: 50;
+    position: relative;
+}
+
+.headerBackground {
+    background: url(/img/background-dark.svg) 0 0 repeat;
+    background-color: #141414;
+    background-size: 1250px;
+}
+
+.lightBackground {
+    background-color: #fff !important;
+}
+
+/* .header::before {
+    content: "";
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    z-index: 0;
+    background: url('/img/background-dark.svg') 0 0 repeat;
+    background-size: 1000px;
+    transform: rotate(25deg);
+    background-color: #141414 !important;
+} */
+
+.headerBottomLeft {
+    display: inline-block;
+    width: 40%;
+    margin: 40px;
+    height: 100px;
+    z-index: 50;
+    position: relative;
+}
+
+.headerBottomLeft h2 {
+    font-size: 22px;
+    line-height: 34px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.headerBottomRight {
+    text-align: center;
+    float: right;
+    width: 40%;
+    margin: 40px;
+    position: inherit;
+}
+
+.headerProjectLink {
+    padding: 15px 40px;
+    font-family: 'Montserrat', sans-serif;
+    color: #000;
+    background: #fff;
+    font-weight: 600;
+    border: 4px solid #5af9c600;
+    transition: 0.4s border ease-in-out;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.headerProjectLink:hover {
+    border: 4px solid #05e69e;
+}
+
+.projectLinkInvert {
+    color: #fff;
+    background: #000;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 20px;
+    margin: 0px 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    box-shadow: 0px 0px 5px 0px #000000;
+}
+
+input:checked+.slider {
+    background-color: #313131;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.lightMode {
+    background-color: #fff0 !important;
+    color: #000 !important;
+    fill: #000 !important;
+}
+
+.lightModeA {
+    color: #000;
+    fill: #000;
+}
+
+.lightModeA:hover {
+    background-color: #1f1e1e !important;
+    color: #ffffff !important;
+}
