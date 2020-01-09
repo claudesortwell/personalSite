@@ -33,10 +33,7 @@ app.use('/', require('./routes/index'));
 
 // Processing Stripe Payment
 app.use('/add/:password', (req, res) => {
-    if (req.params.password == '123') {
-        console.log('Yes');
-        console.log(req.body);
-
+    if (req.params.password == process.env.ADD_PROJECT_PASSWORD) {
         const newProject = new Project({
             projectName: req.body.projectName,
             projectStartDate: req.body.date,
@@ -50,7 +47,8 @@ app.use('/add/:password', (req, res) => {
 
         newProject.save().then()
     } else {
-        console.log('No');
+        res.status(404) // HTTP status 404: NotFound
+            .send('Not found');
     }
     return;
 });

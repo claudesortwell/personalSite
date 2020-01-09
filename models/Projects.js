@@ -12,16 +12,20 @@ const ProjectSchema = new mongoose.Schema({
     projectStack: {
         type: String,
         required: true
-    }, 
+    },
+    projectPlatform: {
+        type: String,
+        required: true
+    },
     projectDesc: {
         type: String,
         required: true
     },
-    projectGithubLink :{
+    projectGithubLink: {
         type: String,
         required: true
     },
-    projectLiveLink :{
+    projectLiveLink: {
         type: String,
         required: true
     },

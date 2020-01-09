@@ -108,8 +108,10 @@
         <p class="projectTextParts"><%= projects.projectDesc %></p>
         <a href="<%= projects.projectGithubLink %>" target="_blank"><i class="mdi mdi-github-circle"></i> Open
             Github</a>
-        <a href="<%= projects.projectLiveLink %>" target="_blank"><i class="mdi mdi-open-in-new"></i> View Live
+        <% if(projects.projectLiveLink != 'null') { %><a href="<%= projects.projectLiveLink %>" target="_blank"><i
+                class="mdi mdi-open-in-new"></i> View Live
             Version</a>
+        <% } %>
     </div>
 
     <img class="projectDemoPic" src="/img/<%= projects.projectName %>.jpg" alt="">

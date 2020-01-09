@@ -77,6 +77,9 @@
         <input type="radio" name="visability" id="Hidden" value="0"></label>
     <br><Br>
     <form>
+        <br>
+        <label for="password">Password</label>
+        <input id="password" type="text">
         <br><br>
         <a onclick="addProject();">Submit</a>
 
@@ -84,8 +87,14 @@
             function addProject() {
                 $.ajax({
                     type: 'post',
-                    url: '/add/123',
-                    data: $('#addProject').serialize()
+                    url: '/add/' + document.getElementById('password').value,
+                    data: $('#addProject').serialize(),
+                    error: function () {
+                        alert('Password incorrect, project not saved. Please try again.');
+                    },
+                    success: function () {
+                        location.reload();
+                    },
                 });
             }
         </script>
