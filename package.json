@@ -1,0 +1,30 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My Development Portfolio Site",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claudesortwell/personalSite.git"
+  },
+  "author": "Claude Sortwel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/claudesortwell/personalSite/issues"
+  },
+  "homepage": "https://github.com/claudesortwell/personalSite#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "mongoose": "^5.8.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
