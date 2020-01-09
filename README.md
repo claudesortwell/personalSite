@@ -1,5 +1,5 @@
 # My Personal Site 
-My Portfolio website built with Node.js and express
+My Portfolio website built with Node.js and Express.
 
 # Getting Started
 1. ```git clone```
