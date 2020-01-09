@@ -41,6 +41,7 @@ app.use('/add/:password', (req, res) => {
             projectName: req.body.projectName,
             projectStartDate: req.body.date,
             projectStack: req.body.stack,
+            projectPlatform: req.body.projectPlatform,
             projectDesc: req.body.projectDesc,
             projectGithubLink: req.body.gitLink,
             projectLiveLink: req.body.projectLink,
