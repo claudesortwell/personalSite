@@ -1,0 +1,87 @@
+<h1>Add A Project</h1>
+<br>
+<style>
+h1 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+#addProject {
+    margin: auto;
+    width: 300px;
+}
+
+#addProject label {
+    font-family: 'Poppins', sans-serif;
+    display: block;
+}
+
+#addProject input {
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid rgb(33, 150, 243);
+}
+
+a {
+    font-family: 'Poppins', sans-serif;
+    background-color: #2196F3;
+    color: #fff;
+    padding: 10px 40px;
+    border-radius: 5px;
+    width: calc(100% - 40px);
+    display: block;
+    text-align: center;
+
+}
+
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<form id="addProject">
+    <label for="projectName">Project Name</label>
+    <input type="text" name="projectName" id="projectName">  
+    <br><br> 
+
+    <label for="date">Start Date</label>
+    <input type="date" name="date" id="date">  
+    <br><br> 
+
+    <label for="stack">Tech Stack</label>
+    <input type="text" name="stack" id="stack">  
+    <br><br>
+
+    <label for="desc">Desc</label>
+    <textarea type="textarea" name="projectDesc" id="desc" style="max-width: 100%;"></textarea>
+    <br><br>
+
+    <label for="gitLink">Github Link</label>
+    <input type="text" name="gitLink" id="gitLink"> 
+    <br><br>
+
+    <label for="gitLink">Project Link</label>
+    <input type="text" name="projectLink" id="projectLink"> 
+    <br><br>
+
+    <label for="projectVis">Project Visability</label><br>
+    <label for="Public" style="float: left;">Public
+    <input type="radio" name="visability" id="Public" value="1"></label>
+    <label for="Hidden" style="float: right;">Hidden
+    <input type="radio" name="visability" id="Hidden" value="0" ></label>
+    <br><Br>
+<form>
+<br><br>
+    <a onclick="addProject();">Submit</a>
+
+    <script>
+    function addProject() {
+        $.ajax({
+            type: 'post',
+            url: '/add/123',
+            data: $('#addProject').serialize()
+        });
+    }
+    </script>
