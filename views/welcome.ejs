@@ -31,11 +31,10 @@
 
         <div id="navOptions" class="navOptions">
             <li><a id="navLink" class="navA" href="#projectPart">Portfolio</a></li>
-            <li><a id="navLink1" class="navA" href="">Contact</a></li>
+            <li><a id="navLink1" class="navA" href="mailto:claude@claudesort.com.au">Contact</a></li>
             <li>
                 <a id="navLink2" class="navA" href="/pdf/Resume Doc.pdf" download><i class="mdi mdi-download"></i>
-                    Download
-                    Resume
+                    Download Resume
                 </a>
             </li>
             <li id="darkModeOption">
@@ -65,9 +64,9 @@
 
         <div class="headerBottomRight">
             <p>Visit my profiles on Github, LinkedIn and Codepen.</p>
-            <i id="icon1" class="mdi mdi-github-circle"></i>
-            <i id="icon3" class="mdi mdi-codepen"></i>
-            <i id="icon2" class="mdi mdi-linkedin"></i>
+            <i id="icon1" class="headerIcon mdi mdi-github-circle"></i>
+            <i id="icon3" class="headerIcon mdi mdi-codepen"></i>
+            <i id="icon2" class="headerIcon mdi mdi-linkedin"></i>
         </div>
 
         <Br /><br />
@@ -81,31 +80,63 @@
 <div id="projectPart" class="projectPart">
     <p>Various projects I have built</p>
     <H1 style="font-size: 58px;font-weight: 600;margin-top: 5px;margin-bottom: 0;">Projects</H1><br />
-    <% if(projects != null) { %> <% var index = 0 %>
-    <% projects.forEach(function(projects) { %>
-    <div class="projectCard">
-        <img src="/img/test.jpg" alt=""">
+    <% if(projects != null) { %> <% var index = 0 %> <% projects.forEach(function(projects) { %>
+    <div id="projectCard" class="projectCard">
+        <img src="/img/<%= projects.projectName %>.jpg" alt=""">
     <div class=" projectCardTextArea">
         <h2><%= projects.projectName %></h2>
-        <br>
+        <p style="color: #6d6d6deb;font-weight: 600;font-family: 'Montserrat', sans-serif;">
+            <%= projects.projectPlatform %></p>
         <h6>Built with <%= projects.projectStack %></h6>
-        <br />
-        <!-- <button>
-            <i class="mdi mdi-github-circle" style="font-size: 20px;top: 2px;margin-right: 5px;position: relative;"></i>
-            Github
-        </button> -->
-        <button>
+        <button onClick="document.getElementById('<%= projects.projectName %>').scrollIntoView();">
             <i class="mdi mdi-arrow-down-bold"
                 style="font-size: 20px;top: 2px;margin-right: 5px;position: relative;"></i>
-            View More
+            <span style="top: -1.5px;position: relative;">View More</span>
         </button>
     </div>
 </div>
 <% index ++ %> <% }); %> <% } %>
 </div>
 
-<style id="backgroundHeaderDark">
-    .header::before {
-        background-color: #141414 !important;
-    }
-</style>
+<% if(projects != null) { %> <% var index = 0 %> <% projects.forEach(function(projects) { %>
+<div id="<%= projects.projectName %>" class="projectSection">
+    <div class="projectSectionText">
+        <h6 class="projectTextParts">2019</h6>
+        <img src="/img/logo/<%= projects.projectName %>.png" alt="">
+        <p class="projectTextParts"><%= projects.projectPlatform %></p>
+        <h3><%= projects.projectName %></h3>
+        <p class="projectTextParts"><%= projects.projectDesc %></p>
+        <a href="<%= projects.projectGithubLink %>" target="_blank"><i class="mdi mdi-github-circle"></i> Open
+            Github</a>
+        <a href="<%= projects.projectLiveLink %>" target="_blank"><i class="mdi mdi-open-in-new"></i> View Live
+            Version</a>
+    </div>
+
+    <img class="projectDemoPic" src="/img/<%= projects.projectName %>.jpg" alt="">
+</div>
+<% index ++ %> <% }); %> <% } %>
+
+<div class="footer">
+    <span style="margin-right: 30px;">Claude Sortwell - <i class="mdi mdi-copyright"></i> 2020 </span>
+    |
+    <span style="margin-left: 20px;">
+        <a class="navA footerButton" href="#navbar">Home</a>
+        <a class="navA footerButton" href="#projectPart">Portfolio</a>
+        <a class="navA footerButton" href="mailto:claude@claudesort.com.au">Contact - Email claude@claudesort.com.au</a>
+        <a class="navA footerButton" href="/pdf/Resume Doc.pdf" download><i class="mdi mdi-download"></i>
+            Download Resume
+        </a>
+    </span>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $(".projectSection").toggleClass(function (index, currentclass) {
+            if (index % 2 == 0) {
+                return "projectSectionBgEven";
+            } else {
+                return "projectSectionBgOdd";
+            }
+        });
+    });
+</script>
