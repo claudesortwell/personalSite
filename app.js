@@ -53,6 +53,6 @@ app.use('/add/:password', (req, res) => {
     return;
 });
 
-const PORT = 5000;
+const PORT = 8002;
 
 app.listen(PORT, console.log(`Server started on port ${PORT}`));
