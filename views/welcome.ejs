@@ -102,7 +102,7 @@
 <% if(projects != null) { %> <% var index = 0 %> <% projects.forEach(function(projects) { %>
 <div id="<%= projects.projectName %>" class="projectSection">
     <div class="projectSectionText">
-        <h6 class="projectTextParts">2019</h6>
+        <h6 class="projectTextParts"><%= projects.projectStartDate %></h6>
         <img src="/img/logo/<%= projects.projectName %>.png" alt="">
         <p class="projectTextParts"><%= projects.projectPlatform %></p>
         <h3><%= projects.projectName %></h3>
