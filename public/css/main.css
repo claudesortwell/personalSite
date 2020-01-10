@@ -420,8 +420,11 @@ input:checked+.slider:before {
     }
 
     .headerTitle {
-        font-size: 45px;
-        line-height: 90px;
+        font-size: 36px;
+        line-height: 70px;
+        text-align: center;
+        margin: auto;
+        margin-top: 35px;
     }
 
     .navOptions {
