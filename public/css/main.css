@@ -453,4 +453,9 @@ input:checked+.slider:before {
     .header {
         padding-top: 0px;
     }
+
+    .projectSectionText a {
+        margin: 0;
+        display: block;
+    }
 }
