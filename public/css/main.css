@@ -302,6 +302,11 @@ html {
     position: inherit;
 }
 
+.headerBottomRight a {
+    text-decoration: none;
+    color: unset;
+}
+
 .headerProjectLink {
     padding: 15px 40px;
     font-family: 'Montserrat', sans-serif;
