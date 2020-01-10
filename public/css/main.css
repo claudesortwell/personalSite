@@ -407,3 +407,47 @@ input:checked+.slider:before {
     background-color: #1f1e1e !important;
     color: #ffffff !important;
 }
+
+@media only screen and (max-width: 950px) {
+
+    .headerBottomRight,
+    .headerBottomLeft {
+        display: block;
+        text-align: center;
+        width: 40%;
+        margin: 50px auto;
+        float: none;
+    }
+
+    .headerTitle {
+        font-size: 45px;
+        line-height: 90px;
+    }
+
+    .navOptions {
+        float: right;
+        margin: 20px 0px;
+    }
+
+    .navA {
+        padding: 10px 13px;
+    }
+
+    .navOptions li {
+        margin: 0;
+        font-size: 12px;
+    }
+
+    .navbar svg {
+        width: 70px;
+        margin: 21px 30px;
+    }
+
+    #darkModeOption {
+        display: none;
+    }
+
+    .header {
+        padding-top: 0px;
+    }
+}
