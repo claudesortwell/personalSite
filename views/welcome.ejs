@@ -107,7 +107,9 @@
     <p class="projectTextParts"><%= projects.projectPlatform %></p>
     <h3><%= projects.projectName %></h3>
     <p class="projectTextParts"><%= projects.projectDesc %></p>
-    <a href="<%= projects.projectGithubLink %>" target="_blank"><i class="mdi mdi-github-circle"></i> Open Github</a>
+    <% if(projects.projectGithubLink != 'null') { %><a href="<%= projects.projectGithubLink %>" target="_blank">
+      <i class="mdi mdi-github-circle"></i> Open Github</a>
+    <% } %>
     <% if(projects.projectLiveLink != 'null') { %><a href="<%= projects.projectLiveLink %>" target="_blank"><i
         class="mdi mdi-open-in-new"></i> View Live Version</a>
     <% } %>
