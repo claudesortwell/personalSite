@@ -31,7 +31,7 @@ app.use(express.urlencoded({
 // Routes
 app.use('/', require('./routes/index'));
 
-// Processing Stripe Payment
+// Adding a project
 app.use('/add/:password', (req, res) => {
     if (req.params.password == process.env.ADD_PROJECT_PASSWORD) {
         const newProject = new Project({
